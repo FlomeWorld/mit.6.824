@@ -105,8 +105,9 @@ func RunWorker(MasterAddress string, me string,
 
 	// DON'T MODIFY CODE BELOW
 	for {
+
 		wk.Lock()
-		if wk.nRPC == 0 {
+		if wk.nRPC == 0 {//worker quit
 			wk.Unlock()
 			break
 		}
